@@ -1,0 +1,45 @@
+﻿<ContentPage
+    x:Class="Nutshell.EventsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Nutshell">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" Android="plus" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    
+    
+    <ListView x:Name="listView" Margin="10" RowHeight="150" ItemTapped="OnItemTapped" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                    
+                    <Image Source="{Binding Picture}" HorizontalOptions="EndAndExpand" Grid.RowSpan="4" />
+                    <Label Text="{Binding Name}" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontSize="Small" Grid.Column="1" />
+                    <Label Text="{Binding Time}" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontSize="Small" Grid.Column="1" Grid.Row="1"/>
+                    <Label Text="{Binding Location}" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontSize="Small" Grid.Column="1" Grid.Row="2"/>
+                    <Label Text="{Binding Freebies}" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontSize="Small" Grid.Column="1" Grid.Row="3"/>
+                    <Label Text="{Binding Points}" VerticalTextAlignment="Center" HorizontalTextAlignment="End" VerticalOptions="CenterAndExpand" FontSize="Small" Grid.Column="2" Grid.RowSpan="4"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

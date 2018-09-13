@@ -1,0 +1,28 @@
+﻿<ContentPage
+    x:Class="Nutshell.EventDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Nutshell" 
+             Title="{Binding Name}">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Initial Pass" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontSize="Large"/>
+        <Label Text="Final Pass" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" Grid.Row="2" FontSize="Large"/>
+        <Button x:Name="InitPassButton" Text="Submit" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Button x:Name="FinalPassButton" Text="Submit" Grid.Column="1" Grid.Row="3" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Entry x:Name="InitPassEntry" Placeholder="Enter code" PlaceholderColor="Gray" HorizontalOptions="Center"  VerticalOptions="Center" Opacity="5" Grid.Row="1"/>
+        <Entry x:Name="FinalPassEntry" Placeholder="Enter code" PlaceholderColor="Gray" HorizontalOptions="Center" VerticalOptions="Center" Opacity="5" Grid.Row="3"/>
+
+    </Grid>
+</ContentPage>
